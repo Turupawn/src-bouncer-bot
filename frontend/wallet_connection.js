@@ -1,6 +1,6 @@
 // CONSTANTS
 const NETWORK_ID = 534352
-const BOT_API_URL = 'http://localhost:8080'
+const BOT_API_URL = 'http://aworlds.world:8080'
 var accounts
 var web3
 
