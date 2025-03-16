@@ -147,7 +147,11 @@ bot.on("message", async (msg) => {
         // userId is the user's id in telegram
         const userId = msg.from.id;
         // We send the user to the web dapp to authenticate
-        bot.sendMessage(userId, `Please visit: ${WEB_DAPP_URL}?userId=${userId}`);
+        bot.sendMessage(
+            userId, 
+            `Please <a href="${WEB_DAPP_URL}?userId=${userId}">click here</a> to authenticate`, 
+            { parse_mode: 'HTML' }
+        );
         return;
     }
 });
