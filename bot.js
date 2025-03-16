@@ -143,7 +143,7 @@ function getAuthenticationSigner(userId, message, signature) {
 bot.on("message", async (msg) => {
     const text = msg.text || "";
     // It checks if the message is "authenticate" and if so, it sends a message to the user to visit the website
-    if (text.toLowerCase() === "/auth") {
+    if (text.toLowerCase() === "/auth" || text.toLowerCase() === "/start") {
         // userId is the user's id in telegram
         const userId = msg.from.id;
         // We send the user to the web dapp to authenticate
